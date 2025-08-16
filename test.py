@@ -6,13 +6,11 @@ os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
 
 if GEMINI_API_KEY:
-    
     print("GEMINI_API_KEY loaded successfully!")
     print(f"Your key starts with: {GEMINI_API_KEY[:4]}...") 
 else:
     print("Error: GEMINI_API_KEY not found.")
-     
-
+    
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage
 
